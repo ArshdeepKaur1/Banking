@@ -1,15 +1,3 @@
-class InsufficentFunds extends Exception {
-	private String err;
-
-	InsufficentFunds(String error) {
-		err = error;
-	}
-
-	@Override
-	public String toString() {
-		return err;
-	}
-}
 abstract public class Account {
 	int Account_Number = 0;
 	String name;
