@@ -15,23 +15,15 @@ public class Driver_Class {
 			System.out.println("Enter amount with which the account is to be started");
 			double amount = sc.nextDouble();
 			acc = new SB_Account(name, amount);
-			System.out.println("Enter w for withdrawal and d for deposit");
-			char op = sc.next().charAt(0);
-			if (op == 'w') {
-				System.out.println("Enter amount to be withdrawn");
-				double amt = sc.nextDouble();
-				double Balance = acc.withdrawal(amt);
-				if (op == 'd') {
-				}
 			}
 			break;
-		}
+			
 		case 'c': {
 			System.out.println("Enter amount with which the account is to be started");
 			double amount = sc.nextDouble();
 			acc = new CurrentAccount(name, amount);
-			break;
-		}
+		 }
+		break;
 		}
 		System.out.println("Enter w for withdrawal and d for deposit");
 		char op = sc.next().charAt(0);
@@ -41,7 +33,14 @@ public class Driver_Class {
 			double amt = sc.nextDouble();
 			double Balance = acc.withdrawal(amt);
 		}
+		break;
+		
+		case 'd': {System.out.println("Enter amount to be deposited");
+		double amt = sc.nextDouble();
+		double Balance = acc.deposit(amt);
 		}
+		break;
 	}
-
+	System.out.println("Current balance is:"+acc.Amount);
+	}
 }

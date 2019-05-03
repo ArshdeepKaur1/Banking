@@ -31,6 +31,7 @@ double Min_balance =1000;
 			
 			}
 			super.Amount = amt;
+			System.out.println("Collect cash from counter. Thank you :-)");
 			}
 		catch (Insufficient_funds err) {
 			System.out.print(err);

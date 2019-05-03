@@ -1,15 +1,4 @@
-class InsufficentFunds extends Exception {
-	private String err;
 
-	InsufficentFunds(String error) {
-		err = error;
-	}
-
-	@Override
-	public String toString() {
-		return err;
-	}
-}
 abstract public class Account {
 	int Account_Number = 0;
 	String name;
@@ -26,25 +15,5 @@ abstract public class Account {
 	abstract double deposit(double amount);
 	abstract double withdrawal(double amount);
 	
-/*
-double deposit(double amount) {
-		Amount = amount + Amount;
-		return Amount;
-	}
-
-	double withdrawal(double amount) {
-		try {
-			double amt = Amount - amount;
-			if (amt <= min_balance) {
-				throw new InsufficentFunds("FUNDS NOT SUFFICENT");
-			}
-			Amount=amt;
-
-		} catch (InsufficentFunds e) {
-			System.out.print(e);
-		} finally {
-			return Amount;
-		}
-	}*/
 
 }

@@ -28,10 +28,11 @@ public final class CurrentAccount extends Account {
 	double withdrawal(double amount) {
 		try {
 			double amt = super.Amount - amount;
-			if (amt <= min_balance) {
+			if (amt < min_balance) {
 				throw new InsufficentFunds("FUNDS NOT SUFFICENT");
 			}
 			super.Amount = amt;
+			System.out.println("Collect cash from counter. Thank you :-)");
 
 		} catch (InsufficentFunds e) {
 			System.out.print(e);
